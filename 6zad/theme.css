@@ -1,0 +1,63 @@
+:root {
+  --bg: #3b1b5a;
+  --panel: #4a1f78;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.8);
+  --accent: #caa7ff;
+  --accent-2: #8be9ff;
+  --border: rgba(255, 255, 255, 0.22);
+}
+
+/* Общая фиолетовая тема для всех фреймов (заголовок, меню, контент). */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Заголовочный фрейм */
+body.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--panel), var(--bg));
+}
+
+body.header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Меню */
+body.menu {
+  padding: 16px;
+}
+
+body.menu h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.menu-image {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hint code {
+  color: var(--accent-2);
+}
+
