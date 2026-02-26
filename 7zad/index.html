@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>7 тема — Блочные элементы, position, flex, grid</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">7 тема — блочные элементы (CSS)</h1>
+        <p class="subtitle">
+          Демонстрация: <code>z-index</code>, <code>clamp()</code>, <code>position</code> (4 блока),
+          Flexbox (<code>flex-direction</code>, <code>flex-wrap</code>, <code>justify-content</code> — все значения),
+          CSS Grid (контейнер + элементы).
+        </p>
+        <nav class="nav" aria-label="Навигация по странице">
+          <a class="chip" href="#zindex">z-index</a>
+          <a class="chip" href="#clamp">clamp()</a>
+          <a class="chip" href="#position">position</a>
+          <a class="chip" href="#flex">flexbox</a>
+          <a class="chip" href="#grid">grid</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="zindex">
+          <h2>1) <code>z-index</code> + <code>overflow</code></h2>
+          <p class="hint">
+            Здесь 3 блока перекрываются (у каждого свой <code>z-index</code>). Наведите курсор на область — у блока “A”
+            поднимется <code>z-index</code>, и он окажется поверх остальных. Контейнер обрезает края за счёт
+            <code>overflow: hidden</code>.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Перекрытие слоёв</h3>
+              <div class="stack-stage" role="img" aria-label="Демонстрация z-index на перекрывающихся блоках">
+                <div class="stack-box stack-a">A</div>
+                <div class="stack-box stack-b">B</div>
+                <div class="stack-box stack-c">C</div>
+                <div class="stack-note">
+                  Значения по умолчанию: A = 1, B = 2, C = 0. При наведении: A = 3.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Коротко</h3>
+              <p>
+                <code>z-index</code> работает для позиционированных элементов (например, с <code>position: relative/absolute/fixed</code>).
+                Чем больше число — тем выше слой в пределах одного контекста наложения.
+              </p>
+              <p>
+                <code>overflow</code> управляет тем, что делать с содержимым, выходящим за границы блока:
+                <code>hidden</code> обрезает, <code>scroll/auto</code> добавляет прокрутку, <code>visible</code> показывает всё.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="clamp">
+          <h2>2) <code>clamp()</code></h2>
+          <p class="hint">
+            <code>clamp(min, preferred, max)</code> помогает делать “плавный” адаптив: значение растёт/уменьшается, но не выходит
+            за границы min/max. Попробуйте менять ширину окна браузера.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3 class="clamp-title">Заголовок с <code>clamp()</code></h3>
+              <p class="clamp-text">
+                Пример: <code>font-size: clamp(18px, 1.6vw + 12px, 30px)</code>
+              </p>
+              <div class="clamp-sample">
+                <strong>Размер меняется плавно</strong>
+                <span class="clamp-text">И не выходит за заданные min/max.</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Когда удобно использовать</h3>
+              <p>
+                - адаптивные шрифты и отступы без “скачков” на брейкпоинтах<br />
+                - ширину/высоту карточек, когда нужно ограничить минимум/максимум<br />
+                - любой параметр, который должен “дышать” от размера экрана
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="position">
+          <h2>3) <code>position</code> — 4 разных блока</h2>
+          <p class="hint">
+            Ниже показаны <code>static</code>, <code>relative</code>, <code>absolute</code> (внутри родителя) и <code>fixed</code>.
+            Блоки оформлены рамками/скруглением/тенью (как в пункте 7.1).
+          </p>
+
+          <div class="pos-stage">
+            <div class="pos-row">
+              <div class="pos-box pos-static">
+                <h4><code>position: static</code> (по умолчанию)</h4>
+                <p>
+                  Элемент идёт в обычном потоке. <code>top/right/bottom/left</code> не влияют.
+                </p>
+              </div>
+
+              <div class="pos-box pos-relative">
+                <h4><code>position: relative</code></h4>
+                <p>
+                  Блок остаётся в потоке, но визуально смещён: <code>top: 10px; left: 10px</code>.
+                </p>
+              </div>
+
+              <div class="pos-abs-wrap">
+                <div class="pos-box pos-absolute">
+                  <h4><code>position: absolute</code></h4>
+                  <p>
+                    Вынут из потока и позиционируется относительно ближайшего “не static” родителя (этой рамки).
+                  </p>
+                </div>
+                <div class="pos-box">
+                  <h4>Родитель для absolute</h4>
+                  <p>
+                    У обёртки задано <code>position: relative</code>, поэтому абсолютный блок привязан к ней.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pos-box">
+                <h4>Доп. контент (для прокрутки)</h4>
+                <p>
+                  Прокрутите страницу — справа снизу закреплён блок <code>position: fixed</code>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pos-fixed" aria-live="polite">
+            <strong><code>position: fixed</code></strong>
+            <span>Этот блок закреплён внизу справа и не двигается при прокрутке.</span>
+          </div>
+        </section>
+
+        <section id="flex">
+          <h2>4) Flexbox — демонстрация свойств</h2>
+          <p class="hint">
+            Для каждого свойства показаны все основные значения. Сами элементы одинаковые, отличается только настройка контейнера.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3><code>flex-direction</code>: <code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code></h3>
+              <div class="flex-group">
+                <div class="flex-demo">
+                  <h4><code>flex-direction: row</code></h4>
+                  <div class="flex-box fx-row">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>flex-direction: row-reverse</code></h4>
+                  <div class="flex-box fx-row-rev">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>flex-direction: column</code></h4>
+                  <div class="flex-box fx-col">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>flex-direction: column-reverse</code></h4>
+                  <div class="flex-box fx-col-rev">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3><code>flex-wrap</code>: <code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code></h3>
+              <p class="hint">
+                Тут элементы сделаны шире, чтобы не помещаться в одну строку.
+              </p>
+              <div class="flex-group">
+                <div class="flex-demo">
+                  <h4><code>flex-wrap: nowrap</code></h4>
+                  <div class="flex-box fx-row fx-nowrap wide-items">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>flex-wrap: wrap</code></h4>
+                  <div class="flex-box fx-row fx-wrap wide-items">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>flex-wrap: wrap-reverse</code></h4>
+                  <div class="flex-box fx-row fx-wrap-rev wide-items">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3><code>justify-content</code>: <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></h3>
+              <div class="flex-group">
+                <div class="flex-demo">
+                  <h4><code>justify-content: flex-start</code></h4>
+                  <div class="flex-box fx-row jc-start">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>justify-content: flex-end</code></h4>
+                  <div class="flex-box fx-row jc-end">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>justify-content: center</code></h4>
+                  <div class="flex-box fx-row jc-center">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>justify-content: space-between</code></h4>
+                  <div class="flex-box fx-row jc-between">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>justify-content: space-around</code></h4>
+                  <div class="flex-box fx-row jc-around">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+                <div class="flex-demo">
+                  <h4><code>justify-content: space-evenly</code></h4>
+                  <div class="flex-box fx-row jc-evenly">
+                    <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="grid">
+          <h2>5) CSS Grid Layout — контейнер и элементы</h2>
+          <p class="hint">
+            Ниже два примера: (1) строгая сетка 12 колонок с ручным размещением элементов через <code>grid-column</code>/<code>grid-row</code>;
+            (2) адаптивная сетка через <code>repeat(auto-fit, minmax(...))</code>.
+          </p>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Grid-контейнер (12 колонок)</h3>
+              <div class="grid-demo">
+                <div class="grid-board" role="img" aria-label="Grid 12 колонок с размещением элементов">
+                  <div class="gitem g1">A</div>
+                  <div class="gitem g2">B</div>
+                  <div class="gitem g3">C</div>
+                  <div class="gitem g4">D</div>
+                </div>
+                <p class="hint">
+                  Размещение сделано правилами у элементов: <code>grid-column</code>, <code>grid-row</code>.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Grid-элементы (адаптив)</h3>
+              <div class="grid-demo">
+                <div class="grid-board-2" aria-label="Адаптивная сетка карточек">
+                  <div class="tag"><code>display: grid</code></div>
+                  <div class="tag"><code>grid-template-columns</code></div>
+                  <div class="tag"><code>gap</code></div>
+                  <div class="tag"><code>auto-fit</code></div>
+                  <div class="tag"><code>minmax()</code></div>
+                  <div class="tag"><code>grid-auto-flow</code> (по умолчанию)</div>
+                </div>
+                <p class="hint">
+                  Колонки подстраиваются под ширину контейнера автоматически.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        Файл: <code>7zad/index.html</code> • Стили: <code>7zad/style.css</code>
+      </footer>
+    </div>
+  </body>
+</html>
