@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Меню</title>
+  <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="menu">
+  <h2>Меню</h2>
+
+  <!-- Меню реализовано как карта-изображение (image map) -->
+  <img class="menu-image" src="media/menu.png" width="220" height="400" alt="Навигационное меню"
+    usemap="#mainmap">
+
+  <map name="mainmap">
+    <!-- 4 прямоугольные активные области: каждая ведёт на отдельную страницу в правом фрейме -->
+    <area shape="rect" coords="0,0,220,100" href="video.html" target="content" alt="Видео">
+    <area shape="rect" coords="0,100,220,200" href="photo.html" target="content" alt="Фото">
+    <area shape="rect" coords="0,200,220,300" href="audio.html" target="content" alt="Аудио">
+    <area shape="rect" coords="0,300,220,400" href="gifs.html" target="content" alt="GIF">
+  </map>
+
+  <p class="hint">
+    Если картинка меню не найдена — проверьте файл <code>6zad/media/menu.png</code>.
+  </p>
+</body>
+
+</html>
+

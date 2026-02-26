@@ -1,0 +1,25 @@
+/* Небольшая надстройка над info.css из 5 задания:
+   делаем фон фиолетовым, но сохраняем общую сетку/кнопки. */
+
+body {
+  background: #3b1b5a;
+  color: #ffffff;
+}
+
+a {
+  color: #8be9ff;
+}
+
+.btn {
+  background: #caa7ff;
+  color: #1b0e2c;
+}
+
+.btn:hover {
+  background: #b58cff;
+}
+
+code {
+  color: #8be9ff;
+}
+
