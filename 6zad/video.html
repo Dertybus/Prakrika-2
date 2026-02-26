@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Видео</title>
+  <!-- Базовый стиль из 5 задания + фиолетовая тема сверху -->
+  <link rel="stylesheet" href="5zad/info.css">
+  <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+  <h2>Видео</h2>
+  <p>
+    Пример вставки видео с помощью тега <code>&lt;video&gt;</code> и нескольких источников.
+  </p>
+
+  <video width="480" height="270" controls poster="media/poster.jpg">
+    <source src="media/sample.mp4" type="video/mp4">
+    <source src="media/sample.webm" type="video/webm">
+    Ваш браузер не поддерживает тег video.
+  </video>
+
+  <!-- «Кнопки» для переключения страниц внутри контентного фрейма -->
+  <div class="buttons">
+    <a class="btn" href="video.html" target="content">Видео</a>
+    <a class="btn" href="photo.html" target="content">Фото</a>
+    <a class="btn" href="audio.html" target="content">Аудио</a>
+    <a class="btn" href="gifs.html" target="content">GIF</a>
+  </div>
+</body>
+
+</html>
+
