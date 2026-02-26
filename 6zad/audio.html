@@ -3,18 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GIF</title>
+  <title>Аудио</title>
   <link rel="stylesheet" href="../5zad/info.css">
   <link rel="stylesheet" href="content.css">
 </head>
 
 <body>
-  <h2>GIF-анимация</h2>
+  <h2>Аудио</h2>
   <p>
-    Пример вставки GIF-изображения через <code>&lt;img&gt;</code>.
+    Пример вставки аудио с помощью тега <code>&lt;audio&gt;</code> и нескольких источников.
   </p>
 
-  <img src="img.gif" alt="Пример GIF-анимации" width="320" height="240">
+  <audio controls>
+    <source src="coconut-mall-made-with-Voicemod.mp3" type="audio/mpeg">
+    <source src="media/song.ogg" type="audio/ogg">
+    Ваш браузер не поддерживает тег audio.
+  </audio>
 
   <div class="buttons">
     <a class="btn" href="video.html" target="content">Видео</a>
@@ -25,3 +29,4 @@
 </body>
 
 </html>
+
