@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+a:hover {
+    color: #26A65B;
+}
+
+table{
+    align-items:center;
+    background-color: crimson;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+th{
+    align-items: center;
+    background-color: #26A65B;
+}
+td{
+    align-items: center;
+    background-color: beige;
+}
