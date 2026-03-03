@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая вёрстка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-semantic">
+<div class="page-semantic-main">
+    <header>
+        <h1>&lt;header&gt; — верхняя часть сайта (семантическая вёрстка)</h1>
+    </header>
+
+    <nav>
+        &lt;nav&gt;
+        <a href="#">Главная</a>
+        <a href="#">Новости</a>
+        <a href="#">Контакты</a>
+        <a href="index.html">К выбору вёрстки</a>
+    </nav>
+
+    <main>
+        <section>
+            &lt;section&gt;
+            <h2>&lt;h1&gt;Заголовок раздела&lt;/h1&gt;</h2>
+            <article>
+                &lt;article&gt;
+                <p>Здесь расположен основной контент страницы. Семантические теги HTML5 описывают смысловые блоки:
+                    <code>&lt;header&gt;</code> для шапки, <code>&lt;nav&gt;</code> для навигации, <code>&lt;section&gt;</code> и
+                    <code>&lt;article&gt;</code> для содержимого, <code>&lt;aside&gt;</code> для дополнительной информации,
+                    <code>&lt;footer&gt;</code> для подвала.</p>
+                <p>Благодаря сетке и медиазапросам макет адаптируется под ширину окна: боковая колонка может
+                    перестраиваться под основной контент на узких экранах.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>&lt;h3&gt;Боковая панель&lt;/h3&gt;</h3>
+            <p>&lt;aside&gt; Дополнительные ссылки и информация, не являющиеся основной частью текста.</p>
+            <p><a href="index.html" style="color:#000;">Вернуться на главную страницу примеров</a></p>
+        </aside>
+    </main>
+
+    <footer>
+        &lt;footer&gt; — подвал сайта
+    </footer>
+</div>
+</body>
+</html>
+
