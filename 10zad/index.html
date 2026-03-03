@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Навигационные панели и слайдер</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Навигационные панели и слайдер</h1>
+  </header>
+
+  <!-- Горизонтальное меню с выпадающим списком -->
+  <nav class="top-nav">
+    <ul class="menu">
+      <li><a href="#">Главная</a></li>
+      <li class="dropdown">
+        <a href="#">О нас</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Команда</a></li>
+          <li><a href="#">История</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Новости</a></li>
+      <li><a href="#">Блог</a></li>
+    </ul>
+  </nav>
+
+  <!-- Выезжающая боковая панель -->
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" />
+  <label for="sidebar-toggle" class="sidebar-button">&#9776; Боковое меню</label>
+
+  <aside class="sidebar">
+    <h2>Боковая панель</h2>
+    <ul>
+      <li><a href="#">Пункт 1</a></li>
+      <li><a href="#">Пункт 2</a></li>
+      <li><a href="#">Пункт 3</a></li>
+      <li><a href="#">Пункт 4</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <section class="description">
+      <p>
+        Ниже показан простой слайдер, который автоматически переключает слайды.
+      </p>
+    </section>
+
+    <!-- Слайдер -->
+    <section class="slider" aria-label="Простой слайдер">
+      <div class="slides">
+        <div class="slide active">
+          <h3>Слайд 1</h3>
+          <p>Пример текста для первого слайда.</p>
+        </div>
+        <div class="slide">
+          <h3>Слайд 2</h3>
+          <p>Здесь может быть новость или акция.</p>
+        </div>
+        <div class="slide">
+          <h3>Слайд 3</h3>
+          <p>Любая другая важная информация.</p>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <button class="dot active" data-index="0" aria-label="К первому слайду"></button>
+        <button class="dot" data-index="1" aria-label="Ко второму слайду"></button>
+        <button class="dot" data-index="2" aria-label="К третьему слайду"></button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Простой слайдер: переключение по кругу
+    (function () {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+        current = index;
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = Number(dot.dataset.index);
+          showSlide(index);
+        });
+      });
+
+      setInterval(() => {
+        const next = (current + 1) % slides.length;
+        showSlide(next);
+      }, 3000);
+    })();
+  </script>
+</body>
+</html>
