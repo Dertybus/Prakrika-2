@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тема 9 – Трансформации и анимации</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Тема 9. Трансформация и анимация</h1>
+  <h2>Простые примеры CSS3 transform, transition и animation</h2>
+
+  <div class="wrapper">
+    <!-- 1. Прыгающий предмет с тенью -->
+    <section class="block">
+      <div class="block-title">1. Прыгающий мяч с изменяющейся тенью</div>
+      <div class="stage">
+        <div class="ball-scene">
+          <div class="ball"></div>
+          <div class="ball-shadow"></div>
+        </div>
+      </div>
+      <p class="hint">
+        Используются функции transform: translate(), scaleX(), scaleY() и @keyframes для имитации прыжка и сплющивания при ударе.
+      </p>
+    </section>
+
+    <!-- 2. Пять объектов с разной анимацией -->
+    <section class="block">
+      <div class="block-title">2. Пять объектов с различной анимацией и трансформацией</div>
+      <div class="stage">
+        <div class="objects-row">
+          <div class="obj obj-rotate">rotate()</div>
+          <div class="obj obj-scale">scale()</div>
+          <div class="obj obj-skew">skew()</div>
+          <div class="obj obj-translate">translate()</div>
+          <div class="obj obj-mix">комбо<br>transform</div>
+        </div>
+      </div>
+      <p class="hint">
+        Для каждого блока используются разные transform и анимации: вращение, масштабирование, наклон, движение и их комбинация.
+      </p>
+    </section>
+
+    <!-- 3. Квадрат, бьющийся о границы блока -->
+    <section class="block">
+      <div class="block-title">3. Квадрат, отскакивающий от границ блока и меняющий цвет</div>
+      <div class="stage">
+        <div class="bounce-stage">
+          <div class="bouncing-square"></div>
+        </div>
+      </div>
+      <p class="hint">
+        Квадрат движется по периметру контейнера с помощью @keyframes. В каждой «точке удара» меняется цвет.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
