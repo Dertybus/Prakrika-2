@@ -1,31 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Тема 4 — Формы</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="..\1zad\free-icon-website-5988512.png" type="image/x-icon">
 </head>
 
 <body>
-<form action="../1zad/" method="get" target="_parent">
-<button>Task 1</button>
-</form>
-<input type="submit">
-<input type="text">
-<input type="password">
-<input type="file">
-<input type="checkbox">
-<input type="radio">
-<input type="reset">
-<input type="hidden">
-<input type="text" name="pole1" disabled>
-<input type="checkbox" name="check1" value="yes" checked>Текст
+    <header class="page-header">
+        <div class="container">
+            <div class="header-row">
+                <div>
+                    <h1>Тема 4. Формы</h1>
+                    <p class="muted">
+                        Демонстрация работы с HTML-формами: форма заявки, анкета и регистрация (в каждой — минимум 5
+                        типов
+                        элементов).
+                    </p>
+                </div>
+
+                <form action="../1zad/" method="get" target="_parent" class="back-form">
+                    <button type="submit" class="btn secondary">Назад (Task 1)</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="container stack">
+        <section class="card">
+            <h2>1) Форма заявки (на услугу)</h2>
+            <p class="muted">Метод: POST. Действие: условный обработчик.</p>
+
+            <form action="request-handler.php" method="post" target="_self" class="form">
+                <input type="hidden" name="source" value="4zad-request-form">
+
+                <div class="grid">
+                    <div class="field">
+                        <label for="rq_name">ФИО*</label>
+                        <input id="rq_name" type="text" name="name" placeholder="Иванов Иван" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rq_email">E-mail*</label>
+                        <input id="rq_email" type="email" name="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rq_phone">Телефон*</label>
+                        <input id="rq_phone" type="tel" name="phone" placeholder="+7 (999) 123-45-67" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rq_date">Желаемая дата</label>
+                        <input id="rq_date" type="date" name="date">
+                    </div>
+
+                    <div class="field">
+                        <label for="rq_service">Услуга</label>
+                        <select id="rq_service" name="service">
+                            <option value="site">Разработка сайта</option>
+                            <option value="design">Дизайн</option>
+                            <option value="seo">SEO-продвижение</option>
+                            <option value="support" selected>Техподдержка</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="rq_budget">Бюджет (руб.)</label>
+                        <input id="rq_budget" type="number" name="budget" min="0" step="1000" placeholder="50000">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="rq_details">Описание заявки</label>
+                    <textarea id="rq_details" name="details" cols="30" rows="5"
+                        placeholder="Коротко опишите задачу..."></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="rq_file">Приложить ТЗ (файл)</label>
+                    <input id="rq_file" type="file" name="spec_file">
+                </div>
+
+                <label class="check">
+                    <input type="checkbox" name="agree" value="yes" required>
+                    <span>Согласен(на) на обработку данных*</span>
+                </label>
+
+                <div class="actions">
+                    <input class="btn primary" type="submit" value="Отправить заявку">
+                    <input class="btn secondary" type="reset" value="Сброс">
+                    <input class="btn ghost" type="button" value="Командная кнопка"
+                        onclick="alert('Командная кнопка: действие выполняется скриптом');">
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>2) Форма анкеты (опрос)</h2>
+            <p class="muted">Метод: GET (для небольших данных). Действие: условный обработчик в новой вкладке.</p>
+
+            <form action="survey-handler.php" method="get" target="_blank" class="form">
+                <fieldset class="fieldset">
+                    <legend>Основная информация</legend>
+
+                    <div class="grid">
+                        <div class="field">
+                            <label for="sv_city">Город</label>
+                            <input id="sv_city" type="text" name="city" value="Смоленск" maxlength="60" size="20">
+                        </div>
+
+                        <div class="field">
+                            <label for="sv_age">Возраст</label>
+                            <input id="sv_age" type="number" name="age" min="0" max="120" placeholder="18">
+                        </div>
+
+                        <div class="field">
+                            <label for="sv_readonly">ID анкеты (только чтение)</label>
+                            <input id="sv_readonly" type="text" name="survey_id" value="SV-2026-001" readonly>
+                        </div>
+
+                        <div class="field">
+                            <label for="sv_disabled">Поле отключено (disabled)</label>
+                            <input id="sv_disabled" type="text" name="disabled_demo" value="Недоступно" disabled>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="fieldset">
+                    <legend>Выбор вариантов</legend>
+
+                    <div class="field">
+                        <div class="label">Укажите ваш пол</div>
+                        <div class="inline">
+                            <label class="radio">
+                                <input type="radio" name="gender" value="male" checked>
+                                <span>Мужской</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="gender" value="female">
+                                <span>Женский</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Интересы (можно несколько)</div>
+                        <div class="inline wrap">
+                            <label class="check">
+                                <input type="checkbox" name="interest_music" value="yes">
+                                <span>Музыка</span>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="interest_sport" value="yes" checked>
+                                <span>Спорт</span>
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" name="interest_it" value="yes">
+                                <span>IT</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="sv_transport">Любимые марки авто (multiple)</label>
+                        <select id="sv_transport" name="cars[]" size="6" multiple>
+                            <optgroup label="Отечественные">
+                                <option value="1">ВАЗ</option>
+                                <option value="2">ГАЗ</option>
+                                <option value="3">Москвич</option>
+                            </optgroup>
+                            <optgroup label="Зарубежные">
+                                <option value="4" selected>BMW</option>
+                                <option value="5">Opel</option>
+                                <option value="6">Audi</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="sv_text">Комментарий</label>
+                    <textarea id="sv_text" name="comment" cols="30" rows="4"
+                        placeholder="Ваши пожелания/мнение...">Текст по умолчанию</textarea>
+                </div>
+
+                <div class="actions">
+                    <input class="btn primary" type="submit" value="Отправить анкету">
+                    <input class="btn secondary" type="reset" value="Сброс">
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>3) Форма регистрации</h2>
+            <p class="muted">Метод: POST. Демонстрация пароля, файла, переключателей, списка и скрытого поля.</p>
+
+            <form action="register.php" method="post" target="_self" class="form">
+                <input type="hidden" name="reg_source" value="4zad-registration">
+
+                <div class="grid">
+                    <div class="field">
+                        <label for="rg_login">Логин*</label>
+                        <input id="rg_login" type="text" name="login" maxlength="20" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rg_email">E-mail*</label>
+                        <input id="rg_email" type="email" name="email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rg_pass">Пароль*</label>
+                        <input id="rg_pass" type="password" name="password" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="rg_role">Роль</label>
+                        <select id="rg_role" name="role">
+                            <option value="student" selected>Студент</option>
+                            <option value="teacher">Преподаватель</option>
+                            <option value="guest">Гость</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="fieldset">
+                    <legend>Настройки</legend>
+
+                    <div class="field">
+                        <div class="label">Показывать профиль</div>
+                        <div class="inline">
+                            <label class="radio">
+                                <input type="radio" name="public_profile" value="yes" checked>
+                                <span>Да</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="public_profile" value="no">
+                                <span>Нет</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <label class="check">
+                        <input type="checkbox" name="newsletter" value="yes" checked>
+                        <span>Получать новости на почту</span>
+                    </label>
+                </fieldset>
+
+                <div class="field">
+                    <label for="rg_avatar">Аватар (файл)</label>
+                    <input id="rg_avatar" type="file" name="avatar">
+                </div>
+
+                <div class="actions">
+                    <input class="btn primary" type="submit" value="Зарегистрироваться">
+                    <input class="btn secondary" type="reset" value="Сброс">
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 
 </html>

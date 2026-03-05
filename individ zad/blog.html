@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Steam Wiki — Блог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Steam <span>Wiki</span></a>
+
+        <button class="burger" type="button" aria-label="Открыть меню навигации">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li><a class="main-nav__link" href="library.html">Каталог</a></li>
+            <li><a class="main-nav__link main-nav__link--active" href="blog.html">Блог</a></li>
+            <li><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <form class="search-form" role="search" aria-label="Поиск по статьям">
+            <label class="visually-hidden" for="blog-search">Поиск по статьям</label>
+            <input id="blog-search" type="search" placeholder="Найти статью по игре" />
+            <span class="search-form__icon">🔍</span>
+          </form>
+
+          <button class="btn btn--ghost" type="button">Войти</button>
+
+          <div class="cart-indicator" aria-label="Корзина модификаций">
+            <span class="cart-indicator__icon" aria-hidden="true">🛒</span>
+            <span class="cart-indicator__count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page container" aria-labelledby="blog-title">
+        <header class="section__header" style="margin-bottom: 26px">
+          <div>
+            <h1 id="blog-title" class="section__title">Блог о Terraria</h1>
+            <p class="section__subtitle">
+              Подборка статей о выживании, боссах и модах для Terraria и Calamity.
+            </p>
+          </div>
+          <span class="pill">Раздел «Блог» • CSS Grid</span>
+        </header>
+
+        <div class="grid grid--responsive" aria-label="Список статей">
+          <article class="card card--blog">
+            <div class="card__thumb">
+              <img src="placeholder.svg" alt="Гайд по Nameless Deity" />
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Как не подыхать от Nameless Deity в Calamity</h2>
+              <span>15.02.2026</span>
+            </div>
+            <p class="card__text">
+              Разбор фаз боя, рекомендованные билды и ошибки, которые чаще всего совершают игроки,
+              впервые встретившиеся с Nameless Deity.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="article.html">Читать далее</a>
+            </div>
+          </article>
+
+          <article class="card card--blog">
+            <div class="card__thumb">
+              <img src="placeholder.svg" alt="Гайд по развитию мира Terraria" />
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Три безопасных маршрута прогресса в Calamity</h2>
+              <span>02.02.2026</span>
+            </div>
+            <p class="card__text">
+              Какие биомы стоит открывать первыми, где добывать ресурсы и как не сломать баланс
+              сложности в начале игры.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="article.html">Читать далее</a>
+            </div>
+          </article>
+
+          <article class="card card--blog">
+            <div class="card__thumb">
+              <img src="placeholder.svg" alt="Настройки модлоадера" />
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">Оптимальные настройки tModLoader для стабильного FPS</h2>
+              <span>21.01.2026</span>
+            </div>
+            <p class="card__text">
+              Что включить и отключить в настройках, чтобы Calamity и другие крупные моды не
+              превращали игру в слайд‑шоу.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="article.html">Читать далее</a>
+            </div>
+          </article>
+
+          <article class="card card--blog">
+            <div class="card__thumb">
+              <img src="placeholder.svg" alt="Обзор полезных модов" />
+            </div>
+            <div class="card__meta">
+              <h2 class="card__title">5 модов, которые делают фарм в Terraria терпимым</h2>
+              <span>10.01.2026</span>
+            </div>
+            <p class="card__text">
+              Обзор модификаций качества жизни: от автоматических сундуков до умных фильтров лута,
+              которые не ломают баланс.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--secondary" href="article.html">Читать далее</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <p class="footer__brand-title">Steam Wiki — блог сообщества</p>
+            <p>
+              Здесь публикуются статьи и новости, соответствующие разделам «Просмотр статей» и
+              «Комментирование» из руководства оператора.
+            </p>
+          </div>
+
+          <nav class="footer__menu" aria-label="Быстрые ссылки">
+            <p class="footer__menu-title">Разделы</p>
+            <ul class="footer__menu-list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="library.html">Каталог модов</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="article.html">Пример статьи</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__menu">
+            <p class="footer__menu-title">Контакты</p>
+            <ul class="footer__menu-list">
+              <li><a href="contacts.html">Обратная связь</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <span class="current-year">2026</span> © STEAM WIKI. Учебный проект.
+          </div>
+          <div class="footer__dev">Раздел «Блог» на CSS Grid.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+

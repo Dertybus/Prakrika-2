@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Steam Wiki — Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Steam Wiki — интерактивная энциклопедия модификаций и гайдов, сделанная сообществом для сообщества."
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Steam <span>Wiki</span></a>
+
+        <button class="burger" type="button" aria-label="Открыть меню навигации">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link main-nav__link--active" href="index.html">Главная</a></li>
+            <li><a class="main-nav__link" href="library.html">Каталог</a></li>
+            <li><a class="main-nav__link" href="blog.html">Блог</a></li>
+            <li><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <form class="search-form" role="search" aria-label="Поиск по статьям">
+            <label class="visually-hidden" for="search-input">Поиск по модам</label>
+            <input id="search-input" type="search" placeholder="Найти мод или игру" />
+            <span class="search-form__icon">🔍</span>
+          </form>
+
+          <button class="btn btn--ghost" type="button">Войти</button>
+
+          <div class="cart-indicator" aria-label="Корзина модификаций">
+            <span class="cart-indicator__icon" aria-hidden="true">🛒</span>
+            <span class="cart-indicator__count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page container" aria-labelledby="hero-title">
+        <div class="hero">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span>Интерактивная энциклопедия игр</span>
+            </div>
+            <h1 id="hero-title" class="hero__title">Steam Wiki</h1>
+            <p class="hero__subtitle">
+              Made with community, by community. Моды, гайды и энциклопедия по любимым играм из
+              Steam с удобной навигацией и живыми обсуждениями.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--secondary" href="library.html">Перейти в каталог</a>
+              <a class="btn btn--outline" href="blog.html">Читать блог</a>
+            </div>
+            <p class="hero__note">
+              Steam Wiki — учебный проект по руководству оператора и веб‑разработке.
+            </p>
+          </div>
+
+          <div class="hero__visual">
+            <article class="hero-card" aria-label="Навигация Steam Wiki">
+              <div class="hero-card__tag">
+                <span>Навигационная схема</span>
+                <span aria-hidden="true">⮕</span>
+              </div>
+              <div class="hero-card__thumb">
+                <img src="placeholder.svg" alt="Абстрактная карта разделов Steam Wiki" />
+                <div class="hero-card__caption">
+                  <div class="hero-card__pill">
+                    <span aria-hidden="true">★</span>
+                    <span>Главная, каталог, блог, личный кабинет</span>
+                  </div>
+                  <div class="hero-card__stat">
+                    <span>Активных статей</span>
+                    <strong>1 248+</strong>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <section class="section" aria-labelledby="benefits-title">
+          <div class="section__header">
+            <h2 id="benefits-title" class="section__title">
+              Почему выбирают <span class="section__title-accent">Steam Wiki</span>
+            </h2>
+            <p class="section__subtitle">
+              Структура интерфейса основана на руководстве оператора: роли пользователей,
+              модерация и удобная работа со статьями.
+            </p>
+          </div>
+
+          <div class="grid grid--responsive">
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Коллективное редактирование статей" />
+              </div>
+              <h3 class="card__title">Коллективная энциклопедия</h3>
+              <p class="card__text">
+                Создавайте и редактируйте статьи по любимым играм. Визуальный редактор, история
+                изменений и понятные роли: читатель, редактор, модератор, администратор.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Система модерации и прав доступа" />
+              </div>
+              <h3 class="card__title">Честная модерация</h3>
+              <p class="card__text">
+                Модераторы отслеживают жалобы, проверяют новые статьи и комментарии, а администраторы
+                управляют правами пользователей прямо из личного кабинета.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Удобная навигация, поиск и фильтрация" />
+              </div>
+              <h3 class="card__title">Умный поиск и фильтры</h3>
+              <p class="card__text">
+                Быстрый поиск по ключевым словам, фильтрация по жанрам, платформам и типу контента,
+                а также подписки на разделы с уведомлениями об изменениях.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Личный кабинет пользователя" />
+              </div>
+              <h3 class="card__title">Личный кабинет</h3>
+              <p class="card__text">
+                Настраивайте профиль, тему оформления и уведомления, следите за своими подписками,
+                черновиками и опубликованными статьями в одном месте.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="top-mods-title">
+          <div class="section__header">
+            <h2 id="top-mods-title" class="section__title">Топ модификаций</h2>
+            <p class="section__subtitle">
+              Подборка популярных модов от активного сообщества Steam Wiki.
+            </p>
+          </div>
+
+          <div class="grid grid--responsive">
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Мод Portal Stories" />
+              </div>
+              <div class="card__meta">
+                <h3 class="card__title">Portal Stories: Co‑Op Rebuild</h3>
+                <span class="card__price">Бесплатно</span>
+              </div>
+              <p class="card__text">
+                Кооперативная кампания для Portal 2 с новыми тестовыми камерами, озвучкой и головоломками.
+              </p>
+              <div class="card__tags">
+                <span class="badge">Puzzle</span>
+                <span class="badge">Co‑op</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                <button
+                  class="btn btn--outline"
+                  type="button"
+                  data-add-to-cart
+                  data-product-name="Portal Stories: Co‑Op Rebuild"
+                >
+                  В корзину
+                </button>
+                <button class="btn btn--ghost" type="button">Скачать</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Мод Skyrim Reborn" />
+              </div>
+              <div class="card__meta">
+                <h3 class="card__title">Skyrim: Lore Friendly Reborn</h3>
+                <span class="card__price">249 ₽</span>
+              </div>
+              <p class="card__text">
+                Подборка модификаций для Skyrim с упором на атмосферу, графику и интерфейс без
+                потери оригинального лора.
+              </p>
+              <div class="card__tags">
+                <span class="badge">RPG</span>
+                <span class="badge badge--warning">Graphics</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                <button
+                  class="btn btn--outline"
+                  type="button"
+                  data-add-to-cart
+                  data-product-name="Skyrim: Lore Friendly Reborn"
+                >
+                  В корзину
+                </button>
+                <button class="btn btn--ghost" type="button">Скачать</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb">
+                <img src="placeholder.svg" alt="Мод Terraria Calamity Helpers" />
+              </div>
+              <div class="card__meta">
+                <h3 class="card__title">Terraria: Calamity Helpers Pack</h3>
+                <span class="card__price">149 ₽</span>
+              </div>
+              <p class="card__text">
+                Набор модов и конфигов для комфортного прохождения Calamity: пресеты сложности,
+                интерфейс, мини‑моды для тренировки боссов.
+              </p>
+              <div class="card__tags">
+                <span class="badge">Sandbox</span>
+                <span class="badge badge--success">Boss Guide</span>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                <button
+                  class="btn btn--outline"
+                  type="button"
+                  data-add-to-cart
+                  data-product-name="Terraria: Calamity Helpers Pack"
+                >
+                  В корзину
+                </button>
+                <button class="btn btn--ghost" type="button">Скачать</button>
+              </div>
+            </article>
+          </div>
+
+          <div style="margin-top: 18px; text-align: right">
+            <a class="btn btn--outline" href="library.html">Смотреть больше модификаций</a>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="pricing-title">
+          <div class="section__header">
+            <h2 id="pricing-title" class="section__title">Тарифы и услуги сообщества</h2>
+            <p class="section__subtitle">
+              Учебная таблица цен на популярные услуги Steam Wiki.
+            </p>
+          </div>
+
+          <div class="pricing">
+            <article class="pricing-plan">
+              <h3 class="pricing-plan__name">Free</h3>
+              <p class="pricing-plan__price">0 ₽ / мес</p>
+              <p class="pricing-plan__label">Для чтения статей и базовой библиотеки модов.</p>
+              <ul class="pricing-plan__list">
+                <li>Доступ к каталогу и блогу</li>
+                <li>Оценка статей и комментариев</li>
+                <li>Личный кабинет с базовыми настройками</li>
+              </ul>
+              <button class="btn btn--outline" type="button">Выбрать Free</button>
+            </article>
+
+            <article class="pricing-plan">
+              <h3 class="pricing-plan__name">Creator</h3>
+              <p class="pricing-plan__price">199 ₽ / мес</p>
+              <p class="pricing-plan__label">Для авторов гайдов и модпаков.</p>
+              <ul class="pricing-plan__list">
+                <li>Публикация статей и модификаций</li>
+                <li>Расширенный личный кабинет</li>
+                <li>Приоритетная модерация контента</li>
+              </ul>
+              <button
+                class="btn btn--secondary"
+                type="button"
+                data-add-to-cart
+                data-product-name="Подписка Creator"
+              >
+                В корзину
+              </button>
+            </article>
+
+            <article class="pricing-plan">
+              <h3 class="pricing-plan__name">Moderator</h3>
+              <p class="pricing-plan__price">Бесплатно</p>
+              <p class="pricing-plan__label">Роль по приглашению для опытных участников.</p>
+              <ul class="pricing-plan__list">
+                <li>Доступ к панели модерации</li>
+                <li>Управление комментариями и жалобами</li>
+                <li>Участие в развитии Steam Wiki</li>
+              </ul>
+              <button class="btn btn--outline" type="button">Оставить заявку</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="banner-title">
+          <div class="section__header">
+            <h2 id="banner-title" class="section__title">Подписка на обновления</h2>
+            <p class="section__subtitle">
+              Подпишитесь, чтобы первыми узнавать об обновлениях модов и новых гайдах.
+            </p>
+          </div>
+
+          <div class="contacts-map">
+            <form class="contact-form" novalidate>
+              <div class="contact-form__group">
+                <label for="newsletter-email">Email для рассылки</label>
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  placeholder="nick@steamwiki.example"
+                  required
+                />
+              </div>
+              <div class="contact-form__group">
+                <button class="btn btn--secondary" type="submit">Подписаться</button>
+              </div>
+              <p class="hero__note">
+                Подписка учебная: письмо не отправляется, но интерфейс повторяет реальные сервисы.
+              </p>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <p class="footer__brand-title">Steam Wiki — учебная энциклопедия игр</p>
+            <p>
+              Проект создан в рамках дисциплины МДК для отработки семантической верстки,
+              адаптивного дизайна и навигации, описанной в руководстве оператора.
+            </p>
+            <div class="footer__social" aria-label="Соцсети">
+              <a class="social-pill" href="#" aria-label="Сообщество Steam Wiki в Discord">💬</a>
+              <a class="social-pill" href="#" aria-label="Канал Steam Wiki на YouTube">▶</a>
+              <a class="social-pill" href="#" aria-label="Группа Steam Wiki в VK">VK</a>
+            </div>
+          </div>
+
+          <nav class="footer__menu" aria-label="Быстрые ссылки">
+            <p class="footer__menu-title">Разделы</p>
+            <ul class="footer__menu-list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="library.html">Каталог модов</a></li>
+              <li><a href="blog.html">Блог и новости</a></li>
+              <li><a href="article.html">Пример статьи</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__menu">
+            <p class="footer__menu-title">Для пользователей</p>
+            <ul class="footer__menu-list">
+              <li><a href="contacts.html">Обратная связь</a></li>
+              <li><a href="contacts.html">Поддержка</a></li>
+              <li><a href="library.html">Популярные модификации</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <span class="current-year">2026</span> © STEAM WIKI. Учебный проект.
+          </div>
+          <div class="footer__dev">
+            Разработчик: Злобин Тимофей, на основе технического задания «Steam Wiki».
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

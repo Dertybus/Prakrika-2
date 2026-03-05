@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder image</title>
+  <desc id="desc">$>=>2>5 87>1@065=85-703;CH:0 4;O :0@B>G5: <>48D8:0F89 8 AB0B59.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#240046"/>
+      <stop offset="50%" stop-color="#7b2cbf"/>
+      <stop offset="100%" stop-color="#6930c3"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="400" height="250" fill="url(#bg)" rx="24" ry="24"/>
+  <rect x="30" y="30" width="340" height="190" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 8" rx="18" ry="18"/>
+  <text x="50%" y="50%" text-anchor="middle" fill="#ffffff" font-family="Roboto Condensed, Arial, sans-serif" font-size="32">
+    Steam Wiki
+  </text>
+  <text x="50%" y="62%" text-anchor="middle" fill="#ffffff" font-family="Comic Sans MS, cursive" font-size="16">
+    Placeholder
+  </text>
+</svg>

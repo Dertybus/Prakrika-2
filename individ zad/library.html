@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Steam Wiki — Каталог модификаций</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Steam <span>Wiki</span></a>
+
+        <button class="burger" type="button" aria-label="Открыть меню навигации">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li>
+              <a class="main-nav__link main-nav__link--active" href="library.html">Каталог</a>
+            </li>
+            <li><a class="main-nav__link" href="blog.html">Блог</a></li>
+            <li><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <form class="search-form" role="search" aria-label="Поиск по модификациям">
+            <label class="visually-hidden" for="catalog-search">Поиск по модификациям</label>
+            <input id="catalog-search" type="search" placeholder="Поиск по названию мода" />
+            <span class="search-form__icon">🔍</span>
+          </form>
+
+          <button class="btn btn--ghost" type="button">Войти</button>
+
+          <div class="cart-indicator" aria-label="Корзина модификаций">
+            <span class="cart-indicator__icon" aria-hidden="true">🛒</span>
+            <span class="cart-indicator__count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page container" aria-labelledby="catalog-title">
+        <header class="section__header" style="margin-bottom: 26px">
+          <div>
+            <h1 id="catalog-title" class="section__title">Каталог модификаций</h1>
+            <p class="section__subtitle">
+              Сетка модов по жанрам и видам игр. Выберите категорию, чтобы отфильтровать карточки.
+            </p>
+          </div>
+          <span class="pill">Учебный каталог • CSS Grid</span>
+        </header>
+
+        <div class="catalog-layout">
+          <aside class="aside">
+            <h2 class="aside__title">Категории</h2>
+            <ul class="category-list">
+              <li>
+                <button
+                  class="category-list__link category-list__link--active"
+                  type="button"
+                  data-category-link="all"
+                >
+                  <span>Все модификации</span>
+                  <span>6</span>
+                </button>
+              </li>
+              <li>
+                <button class="category-list__link" type="button" data-category-link="sci-fi">
+                  <span>Sci‑Fi</span>
+                  <span>2</span>
+                </button>
+              </li>
+              <li>
+                <button class="category-list__link" type="button" data-category-link="horror">
+                  <span>Horror</span>
+                  <span>1</span>
+                </button>
+              </li>
+              <li>
+                <button class="category-list__link" type="button" data-category-link="adventure">
+                  <span>Adventure</span>
+                  <span>1</span>
+                </button>
+              </li>
+              <li>
+                <button class="category-list__link" type="button" data-category-link="creativity">
+                  <span>Creativity</span>
+                  <span>1</span>
+                </button>
+              </li>
+              <li>
+                <button class="category-list__link" type="button" data-category-link="sandbox">
+                  <span>Sandbox/Survival</span>
+                  <span>1</span>
+                </button>
+              </li>
+            </ul>
+          </aside>
+
+          <div>
+            <div class="products-grid" aria-label="Список модификаций">
+              <article class="card" data-category="sci-fi">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Sci‑Fi мод для Portal 2" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">Portal Stories: Co‑Op Rebuild</h2>
+                  <span class="card__price">Бесплатно</span>
+                </div>
+                <p class="card__text">
+                  Новая кооперативная кампания для Portal 2 с нелинейными уровнями и расширенным
+                  редактором тестовых камер.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Sci‑Fi</span>
+                  <span class="badge">Puzzle</span>
+                  <span class="badge">Co‑op</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="Portal Stories: Co‑Op Rebuild"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+
+              <article class="card" data-category="sci-fi">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Sci‑Fi мод для No Man's Sky" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">No Man's Sky: Ultra Exploration</h2>
+                  <span class="card__price">199 ₽</span>
+                </div>
+                <p class="card__text">
+                  Пак улучшений графики и интерфейса, переработанный генератор планет и продвинутая
+                  система сканирования.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Sci‑Fi</span>
+                  <span class="badge">Exploration</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="No Man's Sky: Ultra Exploration"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+
+              <article class="card" data-category="horror">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Horror мод для Phasmophobia" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">Phasmophobia: Night Shift</h2>
+                  <span class="card__price">129 ₽</span>
+                </div>
+                <p class="card__text">
+                  Дополнительные локации, типы призраков и настраиваемые испытания для кооперативной
+                  охоты.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Horror</span>
+                  <span class="badge">Co‑op</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="Phasmophobia: Night Shift"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+
+              <article class="card" data-category="adventure">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Adventure мод для Hollow Knight" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">Hollow Knight: Lost Kingdom</h2>
+                  <span class="card__price">149 ₽</span>
+                </div>
+                <p class="card__text">
+                  Фанатское дополнение c новым королевством, боссами и сюжетной линией.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Adventure</span>
+                  <span class="badge">Metroidvania</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="Hollow Knight: Lost Kingdom"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+
+              <article class="card" data-category="creativity">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Creativity мод для Cities: Skylines" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">Cities: Skylines — Painter Pack</h2>
+                  <span class="card__price">99 ₽</span>
+                </div>
+                <p class="card__text">
+                  Набор творческих инструментов: кастомные дороги, освещение и коллекция зданий для
+                  тематических городов.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Creativity</span>
+                  <span class="badge">City‑builder</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="Cities: Skylines — Painter Pack"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+
+              <article class="card" data-category="sandbox">
+                <div class="card__thumb">
+                  <img src="placeholder.svg" alt="Sandbox/Survival мод для Terraria" />
+                </div>
+                <div class="card__meta">
+                  <h2 class="card__title">Terraria: Calamity Helpers Pack</h2>
+                  <span class="card__price">149 ₽</span>
+                </div>
+                <p class="card__text">
+                  Подборка вспомогательных модов и конфигов для комфортной игры и отработки боссов в
+                  Calamity.
+                </p>
+                <div class="card__tags">
+                  <span class="badge">Sandbox</span>
+                  <span class="badge">Survival</span>
+                </div>
+                <div class="card__actions">
+                  <a class="btn btn--secondary" href="product_place_holder.html">Подробнее</a>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-cart
+                    data-product-name="Terraria: Calamity Helpers Pack"
+                  >
+                    В корзину
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <p class="footer__brand-title">Steam Wiki — учебная энциклопедия игр</p>
+            <p>
+              Каталог модификаций демонстрирует работу CSS Grid, фильтрации по категориям и общую
+              структуру интерфейса из руководства оператора.
+            </p>
+          </div>
+
+          <nav class="footer__menu" aria-label="Быстрые ссылки">
+            <p class="footer__menu-title">Разделы</p>
+            <ul class="footer__menu-list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="library.html">Каталог модов</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__menu">
+            <p class="footer__menu-title">Помощь</p>
+            <ul class="footer__menu-list">
+              <li><a href="article.html">Пример статьи</a></li>
+              <li><a href="contacts.html">Поддержка</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <span class="current-year">2026</span> © STEAM WIKI. Учебный проект.
+          </div>
+          <div class="footer__dev">Верстка каталога: демонстрация CSS Grid и фильтрации.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+

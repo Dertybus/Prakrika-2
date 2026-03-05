@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Steam Wiki — Контакты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Steam <span>Wiki</span></a>
+
+        <button class="burger" type="button" aria-label="Открыть меню навигации">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li><a class="main-nav__link" href="library.html">Каталог</a></li>
+            <li><a class="main-nav__link" href="blog.html">Блог</a></li>
+            <li>
+              <a class="main-nav__link main-nav__link--active" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <form class="search-form" role="search" aria-label="Поиск по сайту">
+            <label class="visually-hidden" for="contacts-search">Поиск</label>
+            <input id="contacts-search" type="search" placeholder="Поиск по сайту" />
+            <span class="search-form__icon">🔍</span>
+          </form>
+
+          <button class="btn btn--ghost" type="button">Войти</button>
+
+          <div class="cart-indicator" aria-label="Корзина модификаций">
+            <span class="cart-indicator__icon" aria-hidden="true">🛒</span>
+            <span class="cart-indicator__count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page container" aria-labelledby="contacts-title">
+        <header class="section__header" style="margin-bottom: 26px">
+          <div>
+            <h1 id="contacts-title" class="section__title">Контакты Steam Wiki</h1>
+            <p class="section__subtitle">
+              Свяжитесь с командой проекта по вопросам модерации, предложений или работы сайта.
+            </p>
+          </div>
+          <span class="pill">Страница «Контакты»</span>
+        </header>
+
+        <div class="contacts-grid">
+          <section class="contacts-block" aria-label="Контактная информация">
+            <h2 class="footer__menu-title">Контактная информация</h2>
+            <ul class="contacts-list">
+              <li><strong>Адрес:</strong> 123456, г. Новая Террария, пр‑кт Песочных Блоков, д. 42</li>
+              <li><strong>Телефон:</strong> +7 (900) 000‑00‑00</li>
+              <li><strong>Email:</strong> support@steamwiki.example</li>
+            </ul>
+          </section>
+
+          <section class="contact-form" aria-label="Форма обратной связи">
+            <h2 class="footer__menu-title">Форма обратной связи</h2>
+            <form class="contact-form" id="feedback-form" novalidate>
+              <div class="contact-form__group">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" placeholder="Как к вам обращаться" />
+              </div>
+              <div class="contact-form__group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="contact-form__group">
+                <label for="message">Сообщение</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Опишите вопрос или проблему"
+                ></textarea>
+              </div>
+              <div class="contact-form__group">
+                <button class="btn btn--secondary" type="submit">Отправить</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <section class="contacts-map" aria-label="Карта проезда">
+          <h2 class="footer__menu-title">Карта проезда</h2>
+          <div class="contacts-map__frame">
+            <div class="contacts-map__placeholder">
+              Встроенная карта (макет). В реальном проекте здесь будет iframe с Яндекс или Google
+              Картами.
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <p class="footer__brand-title">Steam Wiki — контакты проекта</p>
+            <p>
+              Страница «Контакты» завершает пользовательский маршрут из руководства оператора:
+              поддержка пользователей и обратная связь при сбоях или ошибках.
+            </p>
+          </div>
+
+          <nav class="footer__menu" aria-label="Быстрые ссылки">
+            <p class="footer__menu-title">Разделы</p>
+            <ul class="footer__menu-list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="library.html">Каталог модов</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__menu">
+            <p class="footer__menu-title">Поддержка</p>
+            <ul class="footer__menu-list">
+              <li><a href="article.html">FAQ по сложным боссам</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <span class="current-year">2026</span> © STEAM WIKI. Учебный проект.
+          </div>
+          <div class="footer__dev">Форма обратной связи с alert при отправке.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
