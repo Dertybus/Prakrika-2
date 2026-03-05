@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Steam Wiki — Карточка мода</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Steam <span>Wiki</span></a>
+
+        <button class="burger" type="button" aria-label="Открыть меню навигации">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li><a class="main-nav__link" href="library.html">Каталог</a></li>
+            <li><a class="main-nav__link" href="blog.html">Блог</a></li>
+            <li><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <form class="search-form" role="search" aria-label="Поиск по модификациям">
+            <label class="visually-hidden" for="product-search">Поиск по модификациям</label>
+            <input id="product-search" type="search" placeholder="Поиск по названию мода" />
+            <span class="search-form__icon">🔍</span>
+          </form>
+
+          <button class="btn btn--ghost" type="button">Войти</button>
+
+          <div class="cart-indicator" aria-label="Корзина модификаций">
+            <span class="cart-indicator__icon" aria-hidden="true">🛒</span>
+            <span class="cart-indicator__count" id="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page container" aria-labelledby="product-title">
+        <header class="section__header" style="margin-bottom: 26px">
+          <div>
+            <h1 id="product-title" class="section__title">
+              Terraria: Calamity Helpers Pack — карточка товара
+            </h1>
+            <p class="section__subtitle">
+              Пример детальной страницы модификации с вкладками «Описание», «Характеристики» и
+              «Отзывы».
+            </p>
+          </div>
+          <span class="pill">Учебная карточка товара</span>
+        </header>
+
+        <div class="product-layout">
+          <div class="product-media">
+            <img src="placeholder.svg" alt="Превью модификации Terraria Calamity Helpers Pack" />
+          </div>
+
+          <section class="product-summary" aria-label="Краткое описание товара">
+            <h2 class="product-summary__title">Terraria: Calamity Helpers Pack</h2>
+            <p class="product-summary__meta">
+              <strong>Цена:</strong> 149 ₽ · <strong>Жанр:</strong> Sandbox / Survival ·
+              <strong>Игра:</strong> Terraria + Calamity Mod
+            </p>
+            <p class="product-summary__meta">
+              Набор вспомогательных модов, конфигов и пресетов сложности, созданный сообществом для
+              комфортного прохождения Calamity и отработки сложных боссов.
+            </p>
+
+            <div class="card__actions">
+              <button
+                class="btn btn--secondary"
+                type="button"
+                data-add-to-cart
+                data-product-name="Terraria: Calamity Helpers Pack"
+              >
+                Добавить в библиотеку
+              </button>
+              <button class="btn btn--outline" type="button">Скачать демо‑сборку</button>
+            </div>
+
+            <section class="tabs" aria-label="Подробная информация о модификации">
+              <div class="tabs__list" role="tablist">
+                <button
+                  class="tabs__button tabs__button--active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-tab-button="description"
+                >
+                  Описание
+                </button>
+                <button
+                  class="tabs__button"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab-button="details"
+                >
+                  Характеристики
+                </button>
+                <button
+                  class="tabs__button"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab-button="reviews"
+                >
+                  Отзывы
+                </button>
+              </div>
+
+              <article
+                class="tabs__panel tabs__panel--active"
+                data-tab-panel="description"
+                role="tabpanel"
+              >
+                <p>
+                  Calamity Helpers Pack создавался как коллекция «качественных мелочей» для игроков,
+                  которые хотят сосредоточиться на сражениях с боссами, а не на бесконочной
+                  подготовке. Набор включает предварительно настроенные пресеты сложности,
+                  рекомендованные сборки аксессуаров и готовые мировые пресеты.
+                </p>
+                <p>
+                  Сборка полностью следует правилам сообщества и не нарушает баланс: она лишь убирает
+                  лишнюю рутину, сохраняя ощущение прогресса и испытаний.
+                </p>
+              </article>
+
+              <article class="tabs__panel" data-tab-panel="details" role="tabpanel">
+                <p><strong>Когда создан:</strong> январь 2026 года.</p>
+                <p><strong>Кем создан:</strong> команда моддеров «Nameless Survivors».</p>
+                <p><strong>Что входит:</strong></p>
+                <ul class="pricing-plan__list">
+                  <li>3 пресета сложности для разных стадий Calamity.</li>
+                  <li>Рекомендованные наборы аксессуаров и экипировки.</li>
+                  <li>Готовые world‑пресеты для тренировки боссов.</li>
+                  <li>Мини‑гайд по настройке модлоадера.</li>
+                </ul>
+              </article>
+
+              <article class="tabs__panel" data-tab-panel="reviews" role="tabpanel">
+                <p>
+                  <strong>Nameless Mage:</strong> «Сборка идеально подходит для тех, кто застрял на
+                  поздних боссах и хочет тренироваться без долгого фарма».
+                </p>
+                <p>
+                  <strong>RogueRunner:</strong> «Использую этот пак на стримах: зрителям проще
+                  следить за прогрессом, когда есть готовые настройки мира».
+                </p>
+                <p>
+                  Оставить собственный отзыв можно на форуме Steam Wiki в разделе
+                  «Terraria / Calamity».
+                </p>
+              </article>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <p class="footer__brand-title">Steam Wiki — карточка модификации</p>
+            <p>
+              Страница товара повторяет структуру из руководства оператора: главное окно, блок с
+              деталями и отдельные области для отзывов и дополнительной информации.
+            </p>
+          </div>
+
+          <nav class="footer__menu" aria-label="Быстрые ссылки">
+            <p class="footer__menu-title">Разделы</p>
+            <ul class="footer__menu-list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="library.html">Каталог модов</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__menu">
+            <p class="footer__menu-title">Ещё</p>
+            <ul class="footer__menu-list">
+              <li><a href="article.html">Пример статьи</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__copy">
+            <span class="current-year">2026</span> © STEAM WIKI. Учебный проект.
+          </div>
+          <div class="footer__dev">Карточка товара с табами на чистом JavaScript.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
