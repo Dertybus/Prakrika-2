@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Восстановление данных с SSD — RepairService</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">RepairService</a>
+      <button class="burger" type="button" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html" class="active">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="text" placeholder="Поиск..." aria-label="Поиск">
+        </div>
+        <a href="#" class="cart-link">🛒 <span class="cart-count" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="product-page">
+      <div class="product-gallery">
+        <div class="img-wrap">💾</div>
+      </div>
+      <div class="product-info">
+        <h1>Восстановление данных с SSD</h1>
+        <p class="price">от 3 000 ₽</p>
+        <p class="full-desc">
+          Восстановление данных с твердотельных накопителей (SSD) при сбоях, удалении файлов или повреждении контроллера.
+          Используем профессиональное оборудование. Диагностика бесплатно. Срок выполнения от 3 до 7 дней в зависимости от объёма.
+        </p>
+        <button type="button" class="btn add-to-cart" data-name="Восстановление данных с SSD">Добавить в корзину</button>
+
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button type="button" class="tab-btn active" data-tab="desc">Описание</button>
+            <button type="button" class="tab-btn" data-tab="specs">Характеристики</button>
+            <button type="button" class="tab-btn" data-tab="reviews">Отзывы</button>
+          </div>
+          <div id="tab-desc" class="tab-content active">
+            <p>Услуга включает: диагностику накопителя, оценку стоимости, извлечение данных на ваш носитель или в облако. Работаем с SSD всех производителей. Не гарантируем 100% результат при физических повреждениях, но делаем всё возможное.</p>
+          </div>
+          <div id="tab-specs" class="tab-content">
+            <ul>
+              <li>Тип: восстановление данных с SSD</li>
+              <li>Срок: от 3 до 7 рабочих дней</li>
+              <li>Гарантия на работу: 1 месяц</li>
+              <li>Диагностика: бесплатно</li>
+            </ul>
+          </div>
+          <div id="tab-reviews" class="tab-content">
+            <p><strong>Алексей, 12.02.2026</strong> — Восстановили все фото с умершего SSD за 4 дня. Рекомендую.</p>
+            <p><strong>Мария, 01.02.2026</strong> — Профессионально, быстро, прозрачные цены.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <strong>RepairService</strong>
+        <p>Сервисный центр по ремонту телефонов, ноутбуков и планшетов. Работаем с 2015 года.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="ВКонтакте">VK</a>
+        <a href="#" aria-label="Telegram">TG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span class="current-year"></span> RepairService. Учебный проект, ФИО разработчика
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

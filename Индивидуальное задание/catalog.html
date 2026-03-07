@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — RepairService</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">RepairService</a>
+      <button class="burger" type="button" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html" class="active">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="text" placeholder="Поиск..." aria-label="Поиск">
+        </div>
+        <a href="#" class="cart-link">🛒 <span class="cart-count" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Каталог товаров</h1>
+    <div class="catalog-layout">
+      <aside class="catalog-aside">
+        <h3>Категории</h3>
+        <ul>
+          <li><a href="#" class="filter-cat active-cat" data-category="all">Все</a></li>
+          <li><a href="#" class="filter-cat" data-category="pc">ПК</a></li>
+          <li><a href="#" class="filter-cat" data-category="phone">Телефон</a></li>
+          <li><a href="#" class="filter-cat" data-category="tablet">Планшет</a></li>
+          <li><a href="#" class="filter-cat" data-category="home">Домашняя техника</a></li>
+        </ul>
+      </aside>
+      <div class="catalog-grid">
+        <article class="product-card" data-category="phone">
+          <div class="img-wrap">📱</div>
+          <div class="body">
+            <h3>Замена экрана телефона</h3>
+            <p class="price">от 2 500 ₽</p>
+            <p class="desc">Вес: 500г. Гарантия 6 мес.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Замена экрана телефона">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-category="pc">
+          <div class="img-wrap">💻</div>
+          <div class="body">
+            <h3>Чистка ноутбука от пыли</h3>
+            <p class="price">от 1 200 ₽</p>
+            <p class="desc">Время: 1–2 часа. Гарантия 3 мес.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Чистка ноутбука от пыли">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-category="tablet">
+          <div class="img-wrap">🔋</div>
+          <div class="body">
+            <h3>Замена батареи планшета</h3>
+            <p class="price">от 1 800 ₽</p>
+            <p class="desc">Оригинальные комплектующие. Гарантия 6 мес.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Замена батареи планшета">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-category="pc">
+          <div class="img-wrap">💾</div>
+          <div class="body">
+            <h3>Восстановление данных с SSD</h3>
+            <p class="price">от 3 000 ₽</p>
+            <p class="desc">Диагностика бесплатно. Срок от 3 дней.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Восстановление данных с SSD">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-category="home">
+          <div class="img-wrap">🖥</div>
+          <div class="body">
+            <h3>Ремонт монитора</h3>
+            <p class="price">от 2 000 ₽</p>
+            <p class="desc">Замена матрицы, блока питания. Гарантия 1 год.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Ремонт монитора">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-category="phone">
+          <div class="img-wrap">🔌</div>
+          <div class="body">
+            <h3>Замена разъёма зарядки</h3>
+            <p class="price">от 1 500 ₽</p>
+            <p class="desc">USB-C, Lightning, Micro-USB. Гарантия 3 мес.</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Замена разъёма зарядки">В корзину</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <strong>RepairService</strong>
+        <p>Сервисный центр по ремонту телефонов, ноутбуков и планшетов. Работаем с 2015 года.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="ВКонтакте">VK</a>
+        <a href="#" aria-label="Telegram">TG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span class="current-year"></span> RepairService. Учебный проект, ФИО разработчика
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
