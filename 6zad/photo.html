@@ -4,17 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>Фото</title>
-  <link rel="stylesheet" href="../5zad/info.css">
   <link rel="stylesheet" href="content.css">
 </head>
 
 <body>
   <h2>Фото</h2>
   <p>
-    Пример вставки изображения с помощью тега <code>&lt;img&gt;</code>.
+    Пример вставки изображения с помощью тега <code>&lt;img&gt;</code> (обязательные атрибуты <code>src</code> и <code>alt</code>).
   </p>
 
   <img src="Программист.jpg" alt="Пример фотографии" width="480" height="320">
+
+  <p>
+    Изображение как ссылка — тег <code>&lt;img&gt;</code> внутри <code>&lt;a&gt;</code>:
+  </p>
+  <a href="photo.html" target="content"><img src="Программист.jpg" alt="Открыть страницу Фото" width="240" height="160" style="border: 0;"></a>
 
   <div class="buttons">
     <a class="btn" href="video.html" target="content">Видео</a>

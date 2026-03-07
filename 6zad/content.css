@@ -1,19 +1,32 @@
 body {
   background: #3b1b5a;
   color: #ffffff;
+  margin: 0;
+  padding: 16px;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  color: #8be9ff;
+.buttons {
+  margin-top: 20px;
 }
 
 .btn {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
   background: #caa7ff;
   color: #1b0e2c;
 }
 
 .btn:hover {
   background: #b58cff;
+}
+
+a {
+  color: #8be9ff;
 }
 
 code {
