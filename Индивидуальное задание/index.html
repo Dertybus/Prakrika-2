@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RepairService — Ремонт техники</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">RepairService</a>
+      <button class="burger" type="button" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="text" placeholder="Поиск..." aria-label="Поиск">
+        </div>
+        <a href="#" class="cart-link">🛒 <span class="cart-count" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>RepairService</h1>
+      <p class="subtitle">Починим все</p>
+      <a href="catalog.html" class="btn">Перейти в каталог</a>
+    </section>
+
+    <section class="advantages">
+      <h2>Почему выбирают нас</h2>
+      <div class="advantages-grid">
+        <article class="advantage-card">
+          <div class="advantage-icon">⚡</div>
+          <h3>Быстро</h3>
+          <p>Ремонт телефонов и ноутбуков за 1–3 дня. Срочный ремонт в день обращения.</p>
+        </article>
+        <article class="advantage-card">
+          <div class="advantage-icon">✓</div>
+          <h3>Гарантия</h3>
+          <p>Гарантия на все виды работ до 2 лет. Бесплатная диагностика.</p>
+        </article>
+        <article class="advantage-card">
+          <div class="advantage-icon">💰</div>
+          <h3>Честные цены</h3>
+          <p>Фиксированная стоимость после диагностики. Без скрытых платежей.</p>
+        </article>
+        <article class="advantage-card">
+          <div class="advantage-icon">🔧</div>
+          <h3>Опытные мастера</h3>
+          <p>Сертифицированные специалисты с опытом работы более 5 лет.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <h2>Популярные услуги</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="img-wrap">📱</div>
+          <div class="body">
+            <h3>Замена экрана телефона</h3>
+            <p class="price">от 2 500 ₽</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Замена экрана телефона">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="img-wrap">💻</div>
+          <div class="body">
+            <h3>Чистка ноутбука от пыли</h3>
+            <p class="price">от 1 200 ₽</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Чистка ноутбука от пыли">В корзину</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="img-wrap">🔋</div>
+          <div class="body">
+            <h3>Замена батареи планшета</h3>
+            <p class="price">от 1 800 ₽</p>
+            <div class="actions">
+              <a href="product.html" class="btn btn-outline">Подробнее</a>
+              <button type="button" class="btn add-to-cart" data-name="Замена батареи планшета">В корзину</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p><a href="catalog.html" class="btn btn-outline">Смотреть больше</a></p>
+    </section>
+
+    <section class="promo-banner">
+      <h2>Подпишитесь на рассылку</h2>
+      <p>Получите скидку 10% на первый ремонт</p>
+      <form class="newsletter-form" action="#" method="get">
+        <input type="email" placeholder="Ваш email" required aria-label="Email">
+        <button type="submit" class="btn">Подписаться</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-about">
+        <strong>RepairService</strong>
+        <p>Сервисный центр по ремонту телефонов, ноутбуков и планшетов. Работаем с 2015 года.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="ВКонтакте">VK</a>
+        <a href="#" aria-label="Telegram">TG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span class="current-year"></span> RepairService. Учебный проект, ФИО разработчика
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
