@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Практика 7 — JavaScript</title>
+</head>
+<body>
+
+  <h1>Практическая работа №7. JavaScript</h1>
+
+  <h2>1.1 Изменение содержимого HTML</h2>
+  <p id="demo"></p>
+  <button type="button" onclick="document.getElementById('demo').innerHTML='Текст изменён!'">Изменить текст</button>
+
+  <h2>1.2 Атрибуты и стили</h2>
+  <p>
+    <button type="button" onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Включить свет</button>
+    <button type="button" onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Выключить свет</button>
+  </p>
+  <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Лампочка" style="width:100px">
+  <p>
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Скрыть текст</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='block'">Показать текст</button>
+  </p>
+
+  <h2>1.3 Функции и события</h2>
+  <button type="button" onclick="changeText()">Выполнить функцию</button>
+
+  <h2>1.5 Вывод данных</h2>
+  <button type="button" onclick="alert('Иван Иванов нажал кнопку!')">Alert</button>
+  <button type="button" onclick="document.getElementById('sumResult').innerHTML = 5 + 7">Показать 5 + 7</button>
+  <p id="sumResult"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
